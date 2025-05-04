@@ -2,7 +2,7 @@
 
 html, body {
   height: 100%;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -23,7 +23,7 @@ html, body {
 
 @theme {
   --color-burgundy-solid: #ed054a;
-  --color-burgundy-translucent-1: #ed054a44;
+  --color-burgundy-translucent-1: #ed054a55;
   --color-burgundy-translucent-2: #ed054a66;
 }
 
@@ -31,7 +31,6 @@ html, body {
 * {
   cursor: none !important;
 }
-
 
 
 /* default dot */
@@ -54,5 +53,6 @@ html, body {
   width: 32px;
   height: 32px;
   background-color: var(--color-burgundy-translucent-1);
-  border-color: var(--color-burgundy-translucent-2);
+  /* border-color: var(--color-burgundy-translucent-1); */
+  border-color: transparent;
 }
