@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
-:root {
+html, body {
+  height: 100%;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -31,10 +32,6 @@
   cursor: none !important;
 }
 
-
-html, body {
-  height: 100%;
-}
 
 
 /* default dot */
