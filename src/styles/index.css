@@ -8,7 +8,7 @@ html, body {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #121212; // Pure Dark
+  background: #121212; // Pure Dark
   /* background-color: #1c0f13; // Dark Wine */
   /* background-color: #0d1b1e; // Petrol Black */
 
