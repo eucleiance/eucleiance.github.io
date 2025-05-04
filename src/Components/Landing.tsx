@@ -30,7 +30,7 @@ const Landing = () => {
   }
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center min-h-screen bg-gray-950">
       <div className="text-center font-light text-xl font-mono">
         <a
           onClick={handleClick}
