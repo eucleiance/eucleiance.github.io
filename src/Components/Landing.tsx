@@ -30,8 +30,8 @@ const Landing = () => {
   }
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-950">
-      <div className="text-center font-light text-xl font-mono">
+    <div className="flex justify-center items-center min-h-screen bg-gray-950 ">
+      <div className="text-center font-light text-xl font-mono text-rose-100 mx-7 ">
         <a
           onClick={handleClick}
           ref={textRef}
