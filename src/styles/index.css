@@ -24,7 +24,7 @@ html, body {
 @theme {
   --color-burgundy-solid: #ed054a;
   --color-burgundy-translucent-1: #ed054a55;
-  --color-burgundy-translucent-2: #ed054a66;
+  --color-burgundy-translucent-2: #ed054aaa;
 }
 
 
@@ -46,13 +46,17 @@ html, body {
   transform: translate(-50%, -50%);
   z-index: 9999;
   transition: width .2s ease, height .2s ease, background-color .2s ease, border-color .2s ease;
+
+  /* background: white; */
+  mix-blend-mode: difference;
 }
 
 /* when hovering a link/button… */
 .cursor--hover {
   width: 32px;
   height: 32px;
-  background-color: var(--color-burgundy-translucent-1);
+  background-color: var(--color-burgundy-translucent-2);
+  /* background-color: var(--color-burgundy-solid); */
   /* border-color: var(--color-burgundy-translucent-1); */
   border-color: transparent;
 }

@@ -21,7 +21,7 @@ const Landing = () => {
       duration: 6,
       scrambleText: {
         text: poemLines[nextIndex],
-        chars: "lowerCase",
+        chars: "αβγδεζηθλμνξπρστυφχψωΔΣΩ  ",
         revealDelay: 1
       },
       ease: "power1.in"
@@ -31,7 +31,7 @@ const Landing = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-950 ">
-      <div className="text-center font-light text-xl font-mono text-rose-100 mx-7 ">
+      <div className="text-center font-light text-xl font-mono text-rose-50 mx-7 ">
         <a
           onClick={handleClick}
           ref={textRef}

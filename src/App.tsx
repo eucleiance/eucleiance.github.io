@@ -1,3 +1,4 @@
+import About from './Components/About'
 import Cursor from './Components/Cursor'
 import Landing from './Components/Landing'
 
@@ -7,6 +8,7 @@ function App() {
     <div>
       <Cursor />
       <Landing />
+      <About />
     </div>
   )
 }
