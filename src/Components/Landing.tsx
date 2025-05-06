@@ -1,6 +1,6 @@
-import { useRef, useState } from "react"
 import { gsap } from "gsap"
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin"
+import Scramble from "./Scramble"
 
 gsap.registerPlugin(ScrambleTextPlugin)
 
@@ -12,33 +12,16 @@ const poemLines = [
 ]
 
 const Landing = () => {
-  const textRef = useRef(null)
-  const [index, setIndex] = useState(0)
-
-  const handleClick = () => {
-    const nextIndex = (index + 1) % poemLines.length
-    gsap.to(textRef.current, {
-      duration: 6,
-      scrambleText: {
-        text: poemLines[nextIndex],
-        chars: "αβγδεζηθλμνξπρστυφχψωΔΣΩ  ",
-        revealDelay: 1
-      },
-      ease: "power1.in"
-    })
-    setIndex(nextIndex)
-  }
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-950 ">
       <div className="text-center font-light text-xl font-mono text-rose-50 mx-7 ">
-        <a
-          onClick={handleClick}
-          ref={textRef}
-          className="cursor-pointer inline-block"
-        >
-          {poemLines[0]}
-        </a>
+        <Scramble
+        scramArr={poemLines}
+        duration={3}
+        revealDelay={0.1}
+        className="text-rose-50 customcursor"
+        />
       </div>
     </div>
   )

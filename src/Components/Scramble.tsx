@@ -4,47 +4,50 @@ import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin"
 
 gsap.registerPlugin(ScrambleTextPlugin)
 
-interface ScrambleProps {
-  scramArray: string[]
+interface ScrambledTextCyclerProps {
+  scramArr: string[]
+  className?: string
+  duration?: number
+  revealDelay?: number
 }
 
-const Scramble = ({ scramArray }: ScrambleProps) => {
-  const textRef = useRef<HTMLAnchorElement>(null)
+const Scramble = ({ scramArr, className = "", duration = 6, revealDelay = 1 }: ScrambledTextCyclerProps) => {
+  const textRef = useRef<HTMLSpanElement>(null)
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
-    // Set initial text manually, outside of React rendering
-    if (textRef.current) {
-      textRef.current.textContent = scramArray[0]
-    }
-  }, [scramArray])
-
-  const handleClick = () => {
-    const nextIndex = (index + 1) % scramArray.length
-
-    if (textRef.current) {
-      gsap.to(textRef.current, {
-        duration: 6,
+    if (textRef.current && scramArr.length > 0) {
+      gsap.set(textRef.current, {
         scrambleText: {
-          text: scramArray[nextIndex],
+          text: scramArr[0],
           chars: "αβγδεζηθλμνξπρστυφχψωΔΣΩ  ",
-          revealDelay: 1
-        },
-        ease: "power1.in"
+          revealDelay
+        }
       })
     }
+  }, [scramArr, revealDelay])
 
+  const handleClick = () => {
+    const nextIndex = (index + 1) % scramArr.length
+    gsap.to(textRef.current, {
+      duration,
+      scrambleText: {
+        text: scramArr[nextIndex],
+        chars: "αβγδεζηθλμνξπρστυφχψωΔΣΩ  ",
+        revealDelay
+      },
+      ease: "power1.in"
+    })
     setIndex(nextIndex)
   }
 
   return (
-    <div>
-      <a
-        onClick={handleClick}
-        ref={textRef}
-        className="cursor-pointer inline-block"
-      />
-    </div>
+    <span
+      ref={textRef}
+      onClick={handleClick}
+      className={`${className}`}
+    >
+    {scramArr[0]}</span>
   )
 }
 

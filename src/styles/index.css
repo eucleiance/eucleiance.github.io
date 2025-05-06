@@ -1,6 +1,72 @@
 @import "tailwindcss";
 
-html, body {
+
+/* @config "../../tailwind.config.js" */
+
+/* @config {
+  screens: {
+    md: '930px';
+  }
+} */
+
+
+@font-face {
+  font-family: canela-light;
+  src: url('/public/Fonts/Canela-Light-Web.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: canela-light-italic;
+  src: url('/public/Fonts/Canela-LightItalic-Web.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: canela-thin;
+  src: url('/public/Fonts/Canela-Thin-Web.woff2') format('woff2');
+}
+@font-face {
+  font-family: canela-thin-italic;
+  src: url('/public/Fonts/Canela-ThinItalic-Web.woff2') format('woff2');
+}
+@font-face {
+  font-family: canela-regular;
+  src: url('/public/Fonts/CanelaText-Regular-Web.woff2') format('woff2');
+}
+@font-face {
+  font-family: canela-regular-italic;
+  src: url('/public/Fonts/CanelaText-RegularItalic-Web.woff2') format('woff2');
+}
+@font-face {
+  font-family: xanh-regular;
+  src: url('/public/Fonts/XanhMono-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: xanh-italic;
+  src: url('/public/Fonts/XanhMono-Italic.woff') format('woff');
+}
+
+@theme {
+  --color-burgundy-solid: #ed054a;
+  --color-burgundy-translucent-1: #ed054a55;
+  --color-burgundy-translucent-2: #ed054aaa;
+  --font-canela-light: canela-light, "sans-serif";
+  --font-canela-light-italic: canela-light-italic, "sans-serif";
+  --font-canela-thin: canela-thin, "sans-serif";
+  --font-canela-thin-italic: canela-thin-italic, "sans-serif";
+  --font-canela-regular: canela-regular, "sans-serif";
+  --font-canela-regular-italic: canela-regular-italic, "sans-serif";
+  --font-xanh-regular: xanh-regular, "sans-serif";
+  --font-xanh-italic: xanh-italic, "sans-serif";
+}
+
+
+* {
+  cursor: none !important;
+}
+
+
+html,
+body {
   height: 100%;
   font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -8,7 +74,8 @@ html, body {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: #121212; // Pure Dark
+  background: #121212;
+  /* // Pure Dark */
   /* background-color: #1c0f13; // Dark Wine */
   /* background-color: #0d1b1e; // Petrol Black */
 
@@ -21,16 +88,6 @@ html, body {
 }
 
 
-@theme {
-  --color-burgundy-solid: #ed054a;
-  --color-burgundy-translucent-1: #ed054a55;
-  --color-burgundy-translucent-2: #ed054aaa;
-}
-
-
-* {
-  cursor: none !important;
-}
 
 
 /* default dot */
@@ -42,7 +99,8 @@ html, body {
   background-color: var(--color-burgundy-solid);
   pointer-events: none;
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   transform: translate(-50%, -50%);
   z-index: 9999;
   transition: width .2s ease, height .2s ease, background-color .2s ease, border-color .2s ease;
@@ -53,8 +111,8 @@ html, body {
 
 /* when hovering a link/button… */
 .cursor--hover {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   background-color: var(--color-burgundy-translucent-2);
   /* background-color: var(--color-burgundy-solid); */
   /* border-color: var(--color-burgundy-translucent-1); */

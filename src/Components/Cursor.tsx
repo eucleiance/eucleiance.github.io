@@ -18,13 +18,13 @@ export default function Cursor() {
     // add/remove hover class when pointer enters/exits an <a> or <button>
     const onPointerOver = (e: PointerEvent) => {
       const tgt = e.target as HTMLElement;
-      if (tgt.closest("a, button")) {
+      if (tgt.closest("a, button, .customcursor")) {
         cursorRef.current?.classList.add("cursor--hover");
       }
     };
     const onPointerOut = (e: PointerEvent) => {
       const tgt = e.target as HTMLElement;
-      if (tgt.closest("a, button")) {
+      if (tgt.closest("a, button, .customcursor")) {
         cursorRef.current?.classList.remove("cursor--hover");
       }
     };
