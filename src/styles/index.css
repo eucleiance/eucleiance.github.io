@@ -12,40 +12,42 @@
 
 @font-face {
   font-family: canela-light;
-  src: url('/public/Fonts/Canela-Light-Web.woff2') format('woff2');
+  src: url('/Fonts/Canela-Light-Web.woff2') format('woff2');
 }
 
 @font-face {
   font-family: canela-light-italic;
-  src: url('/public/Fonts/Canela-LightItalic-Web.woff2') format('woff2');
+  src: url('/Fonts/Canela-LightItalic-Web.woff2') format('woff2');
 }
 
 @font-face {
   font-family: canela-thin;
-  src: url('/public/Fonts/Canela-Thin-Web.woff2') format('woff2');
+  src: url('/Fonts/Canela-Thin-Web.woff2') format('woff2');
 }
 @font-face {
   font-family: canela-thin-italic;
-  src: url('/public/Fonts/Canela-ThinItalic-Web.woff2') format('woff2');
+  src: url('/Fonts/Canela-ThinItalic-Web.woff2') format('woff2');
 }
 @font-face {
   font-family: canela-regular;
-  src: url('/public/Fonts/CanelaText-Regular-Web.woff2') format('woff2');
+  src: url('/Fonts/CanelaText-Regular-Web.woff2') format('woff2');
 }
 @font-face {
   font-family: canela-regular-italic;
-  src: url('/public/Fonts/CanelaText-RegularItalic-Web.woff2') format('woff2');
+  src: url('/Fonts/CanelaText-RegularItalic-Web.woff2') format('woff2');
 }
 @font-face {
   font-family: xanh-regular;
-  src: url('/public/Fonts/XanhMono-Regular.woff') format('woff');
+  src: url('/Fonts/XanhMono-Regular.woff') format('woff');
 }
 @font-face {
   font-family: xanh-italic;
-  src: url('/public/Fonts/XanhMono-Italic.woff') format('woff');
+  src: url('/Fonts/XanhMono-Italic.woff') format('woff');
 }
 
 @theme {
+  --color-cursor-solid: #FFFFFF;
+  --color-cursor-translucent: #FFFFFFcc;
   --color-burgundy-solid: #ed054a;
   --color-burgundy-translucent-1: #ed054a55;
   --color-burgundy-translucent-2: #ed054aaa;
@@ -95,8 +97,8 @@ body {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 1px solid var(--color-burgundy-solid);
-  background-color: var(--color-burgundy-solid);
+  border: 1px solid var(--color-cursor-solid);
+  background-color: var(--color-cursor-solid);
   pointer-events: none;
   position: fixed;
   top: 0;
@@ -113,7 +115,7 @@ body {
 .cursor--hover {
   width: 24px;
   height: 24px;
-  background-color: var(--color-burgundy-translucent-2);
+  background-color: var(--color-cursor-translucent);
   /* background-color: var(--color-burgundy-solid); */
   /* border-color: var(--color-burgundy-translucent-1); */
   border-color: transparent;
