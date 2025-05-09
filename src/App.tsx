@@ -5,6 +5,7 @@ import Footer from './Components/Footer';
 import Landing from './Components/Landing';
 import Nav from './Components/Nav';
 import Copies from './Pages/Copies'; // Import the new page
+import Projects from './Components/Projects.tsx';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           element={
             <>
               <Landing />
+              <Projects />
               <About />
               <Footer />
             </>

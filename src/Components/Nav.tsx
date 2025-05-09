@@ -10,30 +10,46 @@ const Nav = () => {
 
           {/* Leftmost: leauspaz */}
           <div className="absolute left-0 top-0">
-            <span scramble-to="coldbrewrosh" className="customcursor block w-[140px] lg:pl-7 lg:text-2xl lg:pb-7 ">
+            <a href="https://coldbrewrosh.github.io" scramble-to="coldbrewrosh" className="customcursor block w-[140px] lg:pl-7 lg:text-2xl lg:pb-7 ">
               leauspaz
-            </span>
+            </a>
           </div>
 
           {/* Center-left: nav items */}
           <div className="absolute left-1/2 top-0 md:-translate-x-[66%] lg:-translate-x-[100%] flex gap-6 customcursor">
-            <span scramble-to="Projekte" className="md:w-25 pt-1 hidden md:block">
+            <a href="#projects"
+              scramble-to="Projekte"
+              className="md:w-25 pt-1 hidden md:block"
+            >
               Projects
-            </span>
-            <span scramble-to="Über" className="md:w-20 pt-1 hidden md:block">
+            </a>
+            <a
+              href="#about"
+              scramble-to="Über"
+              className="md:w-20 pt-1 hidden md:block"
+            >
               About
-            </span>
-            <span scramble-to="Bewerbung" className="md:w-30 pt-1 hidden md:block">
+            </a>
+            <a
+              href="/Gurung_Roshan_Lebenslauf.pdf"
+              // download
+              target="_blank" rel="noopener noreferrer"
+              scramble-to="Bewerbung"
+              className="md:w-30 pt-1 hidden md:block" >
               Résumé
-            </span>
+            </a>
           </div>
 
 
           {/* Rightmost: Let's Talk */}
           <div className="absolute right-0 top-0">
-            <span scramble-to="Lass uns reden" className="customcursor block w-[140px] md:text-lg lg:text-lg pt-1 text-right pr-7">
+            <a
+              href="mailto:coldbrewrosh@gmail.com"
+              scramble-to="Lass uns reden"
+              className="customcursor block w-[140px] md:text-lg lg:text-lg pt-1 text-right pr-7"
+            >
               Let's Talk
-            </span>
+            </a>
           </div>
 
         </div>

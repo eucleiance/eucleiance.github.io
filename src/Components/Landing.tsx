@@ -6,8 +6,10 @@ gsap.registerPlugin(ScrambleTextPlugin)
 
 const poemLines = [
   "Hello Stranger!",
-  "Your hair is winter fire, January embers, My heart burns there too",
-  "Can it be that I have not lived? Have I dreamed my life, or was that real which I have lived?",
+  "My portfolio is currently under development",
+  "If you like it so far",
+  "Hire me?",
+  "Please? :)",
   "Bye Stranger."
 ]
 
@@ -25,13 +27,13 @@ const Landing = () => {
       /> */}
 
       {/* Overlay content */}
-      <div className="relative z-10 flex justify-center items-center min-h-screen">
-        <div className="text-center font-light text-xl font-mono text-rose-50 mx-7 bg-black">
+      <div className="relative z-10 flex justify-center items-center min-h-screen bg-rose-50">
+        <div className="text-center font-light text-xl font-mono text-gray-950 mx-7 ">
           <Scramble
             scramArr={poemLines}
-            duration={3}
+            duration={2}
             revealDelay={0.1}
-            className="text-rose-50 customcursor"
+            className="text-gray-950 customcursor"
           />
         </div>
       </div>
