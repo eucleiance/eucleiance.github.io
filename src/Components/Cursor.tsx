@@ -10,7 +10,7 @@ export default function Cursor() {
       gsap.to(cursorRef.current, {
         x: e.clientX,
         y: e.clientY,
-        duration: 0.3,
+        duration: 0.15,
         ease: "power2.out",
       });
     };
