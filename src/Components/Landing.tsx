@@ -5,12 +5,9 @@ import Scramble from "./Scramble"
 gsap.registerPlugin(ScrambleTextPlugin)
 
 const poemLines = [
-  "Hello Stranger!",
-  "My portfolio is currently under development",
-  "If you like it so far",
-  "Hire me?",
-  "Please? :)",
-  "Bye Stranger."
+  "[ Don't Click Me ]",
+  "My portfolio site is currently under development",
+  "Code for this site can be found @ github.com/eucleiance/eucleiance.github.io",
 ]
 
 const Landing = () => {

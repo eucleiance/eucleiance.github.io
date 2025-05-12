@@ -31,10 +31,12 @@ const Nav = () => {
               About
             </a>
             <a
-              href="/Gurung_Roshan_Lebenslauf.pdf"
+              // href="/Gurung_Roshan_Lebenslauf.pdf"
+              href="/videos/showreel.mp4"
               // download
               target="_blank" rel="noopener noreferrer"
-              scramble-to="Bewerbung"
+              // scramble-to="Lebenslauf"
+              scramble-to="Showreel"
               className="md:w-30 pt-1 hidden md:block" >
               Résumé
             </a>
@@ -46,7 +48,7 @@ const Nav = () => {
             <a
               href="mailto:coldbrewrosh@gmail.com"
               scramble-to="Lass uns reden"
-              className="customcursor block w-[140px] md:text-lg lg:text-lg pt-1 text-right pr-7"
+              className="customcursor block w-[140px] md:text-lg lg:text-lg pt-1 text-right lg:pr-7"
             >
               Let's Talk
             </a>
