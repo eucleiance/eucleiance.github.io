@@ -33,7 +33,7 @@ const Nav = () => {
             <a
               // href="/Gurung_Roshan_Lebenslauf.pdf"
               href="/videos/showreel.mp4"
-              // download
+              download
               target="_blank" rel="noopener noreferrer"
               // scramble-to="Lebenslauf"
               scramble-to="Showreel"
